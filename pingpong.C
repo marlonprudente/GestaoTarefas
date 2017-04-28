@@ -42,7 +42,7 @@ int task_create(task_t *task /*descritor da nova tarefa*/, void (*start_func)(vo
     task->status = NOVA;
     getcontext(&(task->context));
 
-    char *pilha = malloc (STACKSIZE);
+    char *pilha = (char *) malloc (STACKSIZE);
 
     if (pilha) {
         task->context.uc_stack.ss_sp = pilha;
@@ -57,8 +57,7 @@ int task_create(task_t *task /*descritor da nova tarefa*/, void (*start_func)(vo
         return -1;
     }
 
-    makecontext(&task->context, void (*start_func)(void *), 1, arg); //Associa o contexto à função passada por argumento
-    
+    makecontext(&task->context, (void*) (*start_func), 1, arg); //Associa o contexto à função passada por argumento    
     task->status = PRONTA; //Finalizada as inicializações da tarefa
 
 #ifdef DEBUG
