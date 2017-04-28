@@ -14,7 +14,7 @@
       <itemPath>pingpong-tasks1.c</itemPath>
       <itemPath>pingpong-tasks2.c</itemPath>
       <itemPath>pingpong-tasks3.c</itemPath>
-      <itemPath>pingpong.C</itemPath>
+      <itemPath>pingpong.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Arquivos de Recurso"
@@ -52,7 +52,7 @@
       </item>
       <item path="pingpong-tasks3.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="pingpong.C" ex="false" tool="1" flavor2="0">
+      <item path="pingpong.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="pingpong.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -87,7 +87,7 @@
       </item>
       <item path="pingpong-tasks3.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="pingpong.C" ex="false" tool="1" flavor2="0">
+      <item path="pingpong.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="pingpong.h" ex="false" tool="3" flavor2="0">
       </item>

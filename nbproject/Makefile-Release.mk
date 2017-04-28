@@ -64,7 +64,7 @@ LDLIBSOPTIONS=
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/gestaotarefas: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/gestaotarefas ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/gestaotarefas ${OBJECTFILES} ${LDLIBSOPTIONS}
 
 ${OBJECTDIR}/contexts.o: contexts.c
 	${MKDIR} -p ${OBJECTDIR}
@@ -86,10 +86,10 @@ ${OBJECTDIR}/pingpong-tasks3.o: pingpong-tasks3.c
 	${RM} "$@.d"
 	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/pingpong-tasks3.o pingpong-tasks3.c
 
-${OBJECTDIR}/pingpong.o: pingpong.C
+${OBJECTDIR}/pingpong.o: pingpong.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/pingpong.o pingpong.C
+	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/pingpong.o pingpong.c
 
 # Subprojects
 .build-subprojects:

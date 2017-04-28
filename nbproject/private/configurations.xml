@@ -26,11 +26,13 @@
         <runcommandpicklist>
           <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
           <runcommandpicklistitem>cc pingpong.c pingpong-task1.c</runcommandpicklistitem>
+          <runcommandpicklistitem>cc pingpong.c pingpong-tasks1.c</runcommandpicklistitem>
+          <runcommandpicklistitem>make</runcommandpicklistitem>
         </runcommandpicklist>
-        <runcommand>cc pingpong.c pingpong-task1.c</runcommand>
+        <runcommand>make</runcommand>
         <rundir></rundir>
         <buildfirst>true</buildfirst>
-        <console-type>1</console-type>
+        <console-type>2</console-type>
         <terminal-type>1</terminal-type>
         <remove-instrumentation>0</remove-instrumentation>
         <environment>
