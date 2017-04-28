@@ -32,7 +32,10 @@ void pingpong_init() {
 
 // Cria uma nova tarefa. Retorna um ID> 0 ou erro.
 
-int task_create(task_t *task /*descritor da nova tarefa*/, void (*start_func)(void *) /* funcao corpo da tarefa*/, void *arg /*argumentos para a tarefa*/) {
+int task_create (task_t *task,			// descritor da nova tarefa
+                 void (*start_func)(void *),	// funcao corpo da tarefa
+                 void *arg) {			// argumentos para a tarefa   
+    
     //Exceptions
     if (!task) {
         perror("Tarefa vazia: ");
@@ -57,14 +60,14 @@ int task_create(task_t *task /*descritor da nova tarefa*/, void (*start_func)(vo
         return -1;
     }
 
-    makecontext(&task->context, (void*) (*start_func), 1, arg); //Associa o contexto à função passada por argumento    
+    makecontext (&task->context, (void*)(*start_func), 1, arg); //Associa o contexto à função passada por argumento    
     task->status = PRONTA; //Finalizada as inicializações da tarefa
 
 #ifdef DEBUG
     
     printf("task_create: criou a tarefa  nro %d\n", task->id);
     
-#endif // DEBUG
+#endif 
 
     return task->id;
 }
