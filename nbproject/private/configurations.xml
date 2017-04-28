@@ -24,13 +24,15 @@
       </nativedebugger>
       <runprofile version="9">
         <runcommandpicklist>
-          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
           <runcommandpicklistitem>cc pingpong.c pingpong-task1.c</runcommandpicklistitem>
           <runcommandpicklistitem>cc pingpong.c pingpong-tasks1.c</runcommandpicklistitem>
+          <runcommandpicklistitem>make clean
+make</runcommandpicklistitem>
           <runcommandpicklistitem>make</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
         </runcommandpicklist>
-        <runcommand>make</runcommand>
-        <rundir></rundir>
+        <runcommand>"${OUTPUT_PATH}"</runcommand>
+        <rundir>/home/marlon/NetBeansProjects/GestaoTarefas/.</rundir>
         <buildfirst>true</buildfirst>
         <console-type>2</console-type>
         <terminal-type>1</terminal-type>
