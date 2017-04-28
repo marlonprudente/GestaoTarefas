@@ -4,6 +4,8 @@
 //
 // Estruturas de dados internas do sistema operacional
 
+#include <ucontext.h>
+
 #ifndef __DATATYPES__
 #define __DATATYPES__
 
@@ -13,12 +15,12 @@ enum status_t{NOVA, PRONTA, SUSPENSA, EXECUTANDO, TERMINADA};
 // Estrutura que define uma tarefa
 typedef struct task_t
 {
-    struct task_t *prev;    //Próxima tarefa da fila
-    struct task_t *next;    //Tarefa anterior da fila
-    int id;                //Id da tarefa
     ucontext_t context;     //Contexto da tarefa
     enum status_t status;   //Estado da tarefa
     struct task_t *parent;  //"Pai" da tarefa (tarefa em execução quando esta tarefa foi criada)
+    struct task_t *prev;    //Próxima tarefa da fila
+    struct task_t *next;    //Tarefa anterior da fila
+    int id;                //Id da tarefa
 } task_t ;
 
 // estrutura que define um semáforo
